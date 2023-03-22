@@ -170,3 +170,4 @@ playground/
 sweeps/
 wandb/
 wdb_sweep.py
+.cog
