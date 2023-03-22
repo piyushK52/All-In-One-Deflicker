@@ -3,7 +3,7 @@
 
 build:
   # set to true if your model requires a GPU
-  gpu: false
+  gpu: true
 
   system_packages:
     - libgl1-mesa-glx
@@ -11,6 +11,7 @@ build:
 
   # python version in the form '3.8' or '3.8.12'
   python_version: "3.8"
+  cuda: "9.0"
 
   # a list of packages in the format <package-name>==<version>
   python_packages:
@@ -28,7 +29,6 @@ build:
     - smmap==5.0.0
     - tensorboardx==2.6
     - vcam==1.0
-    # - wandb==0.13.10
     - torch==2.0.0
     - opencv-python==4.7.0.72
     - tqdm==4.65.0
