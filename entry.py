@@ -2,8 +2,8 @@ import os
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--ckpt_filter", default="./pretrained_weights/neural_filter.pth",type=str, help="the ckpt of neural filter network")
-parser.add_argument("--ckpt_local", default="./pretrained_weights/local_refinement_net.pth", type=str, help="the ckpt of local refinement network")
+# parser.add_argument("--ckpt_filter", default="./pretrained_weights/neural_filter.pth",type=str, help="the ckpt of neural filter network")
+# parser.add_argument("--ckpt_local", default="./pretrained_weights/local_refinement_net.pth", type=str, help="the ckpt of local refinement network")
 parser.add_argument("--video_name", default=None, type=str, help="the name of input video")
 parser.add_argument("--video_frame_folder", default=None, type=str, help="the name of input video frame folders")
 parser.add_argument("--fps", default=10, type=int, help="frame per second")

@@ -18,13 +18,25 @@ class Predictor(BasePredictor):
         ),
     ) -> Path:
         """Run a single prediction on the model"""
+        print("video_path: ", video_path)
+
         generate_vid = "python entry.py --video_name {}".format(video_path)
         os.system(generate_vid)
 
+        video_path = str(video_path)
         video_name = video_path.split("/")[-1]
-        video_name = video_name.split(".")[0]
+        video_name =  video_name.rsplit(".", 1)[0]
 
-        return "./data/test/{}/output.mp4".format(video_name)
+        contents = os.listdir("./results/")
+        print("contents: ", contents)
+
+        contents = os.listdir("./results/{}/neural_filter/".format(video_name))
+
+        # Print the contents of the folder
+        for item in contents:
+            print(item)
+
+        return "./results/{}/neural_filter/output.mp4".format(video_name)
         # processed_input = preprocess(image)
         # output = self.model(processed_image, scale)
         # return postprocess(output)
